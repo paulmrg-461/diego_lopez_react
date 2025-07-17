@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { useAppData } from '../hooks/useAppData';
 import { getProgressPercentage, getLicenseTypeColor, getStatusColor, cn } from '../utils';
+import type { Student } from '../types';
 
 const Hours: React.FC = () => {
   const { students, getStudentAttendance } = useAppData();
@@ -49,7 +50,7 @@ const Hours: React.FC = () => {
       return 0;
     });
 
-  const getStudentProgress = (student: any) => {
+  const getStudentProgress = (student: Student) => {
     const totalCompleted = student.theoreticalHours + student.practicalHours;
     const totalRequired = student.totalTheoreticalRequired + student.totalPracticalRequired;
     const overallProgress = getProgressPercentage(totalCompleted, totalRequired);

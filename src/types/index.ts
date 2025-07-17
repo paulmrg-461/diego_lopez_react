@@ -4,7 +4,7 @@ export type LicenseType = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
 
 export type StudentStatus = 'active' | 'graduated' | 'suspended' | 'inactive';
 
-export type VehicleStatus = 'available' | 'in_use' | 'maintenance';
+export type VehicleStatus = 'available' | 'in_use' | 'maintenance' | 'out_of_service';
 
 export interface Student {
   id: string;
