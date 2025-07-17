@@ -94,6 +94,42 @@ npm run preview
 npm run lint
 ```
 
+## Despliegue en GitHub Pages
+
+Este proyecto está configurado para desplegarse automáticamente en GitHub Pages usando GitHub Actions.
+
+### Configuración Automática
+
+1. **Push al repositorio:** Cada vez que hagas push a la rama `main`, se ejecutará automáticamente el workflow de despliegue
+
+2. **GitHub Actions:** El archivo `.github/workflows/deploy.yml` contiene la configuración para:
+   - Instalar dependencias
+   - Construir el proyecto
+   - Desplegar a GitHub Pages
+
+### Configuración Manual (Primera vez)
+
+1. **Habilitar GitHub Pages:**
+   - Ve a Settings → Pages en tu repositorio de GitHub
+   - En "Source", selecciona "GitHub Actions"
+
+2. **Verificar permisos:**
+   - Asegúrate de que el repositorio tenga permisos de escritura para GitHub Actions
+   - Ve a Settings → Actions → General → Workflow permissions
+
+3. **URL del sitio:**
+   - Una vez desplegado, tu sitio estará disponible en:
+   - `https://tu-usuario.github.io/diego_lopez_attendance/`
+
+### Comandos de Despliegue Manual
+
+```bash
+# Construir para GitHub Pages
+NODE_ENV=production npm run build
+
+# El build se generará en la carpeta 'dist' lista para despliegue
+```
+
 ## Estructura del Proyecto
 
 ```
