@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { useAppData } from '../hooks/useAppData';
 import { formatDate, formatTime, getStatusColor, cn } from '../utils';
-import type { Schedule as ScheduleType, Student } from '../types';
+import type { Schedule as ScheduleType } from '../types';
 import { mockInstructors, mockVehicles } from '../data/mockData';
 
 const Schedule: React.FC = () => {

@@ -128,7 +128,10 @@ export const mockVehicles: Vehicle[] = [
     year: 2022,
     plate: 'ABC-123',
     licenseType: 'B1',
-    status: 'available'
+    status: 'available',
+    mileage: 45000,
+    lastMaintenance: '2024-06-15',
+    nextMaintenance: '2024-09-15'
   },
   {
     id: '2',
@@ -137,7 +140,10 @@ export const mockVehicles: Vehicle[] = [
     year: 2021,
     plate: 'DEF-456',
     licenseType: 'B2',
-    status: 'available'
+    status: 'available',
+    mileage: 52000,
+    lastMaintenance: '2024-05-20',
+    nextMaintenance: '2024-08-20'
   },
   {
     id: '3',
@@ -146,7 +152,10 @@ export const mockVehicles: Vehicle[] = [
     year: 2023,
     plate: 'GHI-789',
     licenseType: 'A2',
-    status: 'in_use'
+    status: 'in_use',
+    mileage: 15000,
+    lastMaintenance: '2024-07-01',
+    nextMaintenance: '2024-10-01'
   },
   {
     id: '4',
@@ -155,7 +164,10 @@ export const mockVehicles: Vehicle[] = [
     year: 2022,
     plate: 'JKL-012',
     licenseType: 'A1',
-    status: 'available'
+    status: 'available',
+    mileage: 28000,
+    lastMaintenance: '2024-06-10',
+    nextMaintenance: '2024-09-10'
   }
 ];
 

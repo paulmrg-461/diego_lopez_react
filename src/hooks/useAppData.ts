@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import type { Student, Attendance, Schedule, DashboardStats } from '../types';
 import { 
   mockStudents, 
@@ -11,8 +11,7 @@ export const useAppData = () => {
   const [students, setStudents] = useState<Student[]>(mockStudents);
   const [attendance, setAttendance] = useState<Attendance[]>(mockAttendance);
   const [schedule, setSchedule] = useState<Schedule[]>(mockSchedule);
-  const [dashboardStats, setDashboardStats] = useState<DashboardStats>(mockDashboardStats);
-  const [loading, setLoading] = useState(false);
+  const [dashboardStats] = useState<DashboardStats>(mockDashboardStats);
 
   const updateAttendance = (studentId: string, date: string, status: 'present' | 'absent' | 'late') => {
     const existingAttendance = attendance.find(
@@ -91,7 +90,6 @@ export const useAppData = () => {
     attendance,
     schedule,
     dashboardStats,
-    loading,
     updateAttendance,
     addSchedule,
     updateScheduleStatus,

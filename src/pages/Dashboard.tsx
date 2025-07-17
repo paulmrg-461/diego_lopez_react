@@ -3,24 +3,18 @@ import {
   Users, 
   UserCheck, 
   GraduationCap, 
-  Calendar, 
-  Clock,
-  TrendingUp,
-  Car,
-  AlertCircle
+  Calendar,
+  TrendingUp
 } from 'lucide-react';
 import { useAppData } from '../hooks/useAppData';
-import { formatDate, getStatusColor, cn } from '../utils';
+import { getStatusColor, cn } from '../utils';
 
 const Dashboard: React.FC = () => {
   const { 
     students, 
     dashboardStats, 
-    getTodayAttendance, 
     getTodaySchedule 
   } = useAppData();
-
-  const todayAttendance = getTodayAttendance();
   const todaySchedule = getTodaySchedule();
   const recentStudents = students.slice(0, 5);
 

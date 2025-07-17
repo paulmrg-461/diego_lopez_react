@@ -11,14 +11,11 @@ import {
 } from 'lucide-react';
 import { useAppData } from '../hooks/useAppData';
 import { formatDate, getStatusColor, cn } from '../utils';
-import type { Student } from '../types';
 
 const Attendance: React.FC = () => {
-  const { students, attendance, updateAttendance, getTodayAttendance } = useAppData();
+  const { students, attendance, updateAttendance } = useAppData();
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
   const [filterType, setFilterType] = useState<string>('all');
-  
-  const todayAttendance = getTodayAttendance();
   const dateAttendance = attendance.filter(att => att.date === selectedDate);
   
   const getAttendanceForStudent = (studentId: string, date: string) => {

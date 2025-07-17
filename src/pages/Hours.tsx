@@ -11,7 +11,6 @@ import {
 } from 'lucide-react';
 import { useAppData } from '../hooks/useAppData';
 import { getProgressPercentage, getLicenseTypeColor, getStatusColor, cn } from '../utils';
-import { licenseRequirements } from '../data/mockData';
 
 const Hours: React.FC = () => {
   const { students, getStudentAttendance } = useAppData();
